@@ -16,7 +16,7 @@ const Header = () => {
                 <div className='container mx-auto py-2'>
                     <div className='flex item-center justify-between'>
                         <div className='flex items-center'>
-                            <h1 className='text-2xl font-bold'>Hello World</h1>
+                            <h1 className='text-2xl font-bold'>Cat</h1>
                         </div>
 
                         {/* Hamburger Icon */}
