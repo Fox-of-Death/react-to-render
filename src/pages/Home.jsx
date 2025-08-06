@@ -1,5 +1,5 @@
 import React from 'react'
-import bgImage from '../assets/img/2025_04_17_08_27_04_3182364.png';
+import bgImage from '../assets/img/2025_04_17_08_27_04_3182364.png'
 
 const Home = () => {
     return (
