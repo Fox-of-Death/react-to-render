@@ -6,7 +6,8 @@ const Header = () => {
 
     const menuItems = [
         { name: 'Home', link: '/' },
-        { name: 'Course', link: '/course' },
+        { name: 'About', link: '/about' },
+        { name: 'Cat Photo', link: '/course' },
         { name: 'Contact', link: '/contact' }
     ]
 

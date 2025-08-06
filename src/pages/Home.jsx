@@ -1,5 +1,6 @@
 import React from 'react'
 import bgImage from '../assets/img/2025_04_17_08_27_04_3182364.png'
+import Button from '../components/Button'
 
 const Home = () => {
     return (
@@ -8,6 +9,7 @@ const Home = () => {
                 <div className='container mx-auto p-4'>
                     <h2 className='text-5xl font-bold mb-4 text-white'>Welcome to World Cat</h2>
                     <p className='text-white mb-6 text-lg font-semibold'>Recommend</p>
+                    <Button />
                 </div>
             </section>
         </>

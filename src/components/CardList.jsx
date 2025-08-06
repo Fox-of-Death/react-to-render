@@ -11,6 +11,7 @@ const CardList = () => {
                         key={card.id}
                         title={card.title}
                         duration={card.duration}
+                        description={card.description}
                         price={card.price}
                         imageUrl={card.imageUrl}
                     />
