@@ -1,17 +1,15 @@
 import React from 'react';
-import { useParams, useNavigate, Navigate } from 'react-router-dom';
-import allCardData from '../services/courseData';
+import { useParams, useNavigate } from 'react-router-dom';
+import courseData from './../services/courseData';  
 
 const CardDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const card = allCardData.find((item) => item.id === parseInt(id));
+  const card = courseData.find((item) => item.id === parseInt(id));
 
   if (!card) {
-    return <Navigate to="*" replace />;
+    return <Navigate to="*" />;
   }
-
-  const imageAltText = `An image related to the topic of: ${card.title}`;
 
   return (
     <>
@@ -19,7 +17,7 @@ const CardDetail = () => {
         <div className='container mx-auto py-10 px-4'>
           <div className='md:flex md:flex-row rounded-lg shadow-lg overflow-hidden'>
             <div className='w-full md:w-1/2 h-120'>
-              <img src={card.imageUrl} alt={imageAltText} />
+              <img src={card.imageUrl} alt={card.title} />
             </div>
             <div className='md:w-1/2 w-full p-6 flex flex-col'>
               <h1 className='text-4xl font-bold text-blue-800 mb-4'>{card.title}</h1>
@@ -29,7 +27,7 @@ const CardDetail = () => {
           <button
             onClick={() => navigate(-1)}
             className='mt-8 px-6 py-3 bg-blue-800 text-white rounded-lg shadow-md hover:bg-blue-600 transition duration-300'>
-            Go Back
+            ย้อนกลับ
           </button>
         </div>
       </main>

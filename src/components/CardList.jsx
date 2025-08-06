@@ -1,24 +1,22 @@
-import React from 'react'
-import courseData from '../services/courseData'
-import Card from './Card'
+import React from 'react';
+import Card from './Card';
 
-const CardList = () => {
-    return (
-        <>
-            <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-4 py-4'>
-                {courseData.map(card => (
-                    <Card
-                        key={card.id}
-                        title={card.title}
-                        duration={card.duration}
-                        description={card.description}
-                        price={card.price}
-                        imageUrl={card.imageUrl}
-                    />
-                ))}
-            </div>
-        </>
-    )
-}
+const CardList = ({ cardData = [] }) => {
+  return (
+    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 py-4">
+      {cardData.map((card) => (
+        <Card
+          key={card.id}
+          id={card.id}
+          title={card.title}
+          description={card.description}
+          price={card.price}
+          imageUrl={card.imageUrl}
+        />
+      ))}
+    </div>
+  );
+};
 
-export default CardList
+
+export default CardList;
